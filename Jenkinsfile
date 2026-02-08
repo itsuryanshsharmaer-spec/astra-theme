@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Deploy Astra Theme') {
+        stage('Deploy to EC2') {
             steps {
                 sh '''
-                sudo rsync -av --delete ./ /var/www/html/wordpress/wp-content/themes/astra/
-                sudo chown -R www-data:www-data /var/www/html/wordpress/wp-content/themes/astra
-                sudo systemctl reload apache2
+                echo "Deploying Astra theme to EC2..."
+                rsync -av --delete ./ ubuntu@51.20.51.166:/var/www/html/wordpress/wp-content/themes/astra/
                 '''
             }
         }
     }
 }
+
