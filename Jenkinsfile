@@ -6,7 +6,10 @@ pipeline {
             steps {
                 sh '''
                 echo "Deploying Astra theme to EC2..."
-                rsync -av --delete ./ ubuntu@51.20.51.166:/var/www/html/wordpress/wp-content/themes/astra/
+
+                rsync -rv --delete \
+                  --no-perms --no-owner --no-group \
+                  ./ ubuntu@51.20.51.166:/var/www/html/wordpress/wp-content/themes/astra/
                 '''
             }
         }
