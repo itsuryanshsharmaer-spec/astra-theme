@@ -5,6 +5,7 @@ pipeline {
         stage('Deploy to EC2') {
             steps {
                 sh '''
+                echo "Deploying Astra theme to EC2..."
                 rsync -rv --delete \
                   --exclude='.git' \
                   --exclude='Jenkinsfile' \
