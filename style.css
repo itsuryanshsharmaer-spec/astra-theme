@@ -68,3 +68,7 @@ Licensed under MIT ( https://github.com/WPTT/webfont-loader/blob/master/LICENSE 
 /*
  CI/CD test comment – Jenkins automation
 */
+/* Webhook test */
+body {
+    border-top: 5px solid red;
+}
