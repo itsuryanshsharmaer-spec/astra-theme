@@ -72,3 +72,17 @@ Licensed under MIT ( https://github.com/WPTT/webfont-loader/blob/master/LICENSE 
 /* poll scm 2 test Sun Feb  8 12:08:12 PM IST 2026 */
 /* CI/CD TEST - FINAL */
 /* testing */
+/* Jenkins Pipeline Test - Change heading text */
+h2.elementor-heading-title {
+    visibility: hidden;
+    position: relative;
+}
+
+h2.elementor-heading-title::after {
+    content: "My Services";
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff5722; /* optional: highlight change */
+}
