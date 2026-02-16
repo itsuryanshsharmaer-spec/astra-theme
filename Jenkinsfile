@@ -10,7 +10,7 @@ pipeline {
                   --exclude='.git' \
                   --exclude='Jenkinsfile' \
                   --no-perms --no-owner --no-group \
-                  ./ ubuntu@51.20.51.166:/var/www/html/wordpress/wp-content/themes/astra/
+                  ./ ubuntu@13.50.160.64:/var/www/html/wordpress/wp-content/themes/astra/
                 '''
             }
         }
